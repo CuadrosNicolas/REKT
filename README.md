@@ -1,4 +1,18 @@
+#Description
+
+Ce projet a pour bute de créer un petit programme capable de dessiner/supprimer des rectangles sur des images
+et de les enregistrer au format .json.
+
+Ce projet à vue le jour en 1 semaine afin de répondre à un problème de donnée incomplète dans un projet d'apprentissage avec du deep learning.
+
+Il a été accompagné de la création d'une mini librairie permettant la lecture de fichier Json à partir du C++.
+
 # Installation
+Installer JSONReader :
+
+Clonez : https://github.com/Inagaroth/JSONReader
+Puis compilez et mettez la librairie dans le dossier /lib.
+Les headers sont déjà inclus dans le dossier correspondant.
 
 Installer la sfml :
 ```sudo apt-get install libsfml-dev```
