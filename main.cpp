@@ -8,7 +8,11 @@
 #include "Page.h"
 #include <math.h>
 using namespace std;
-
+bool mouseInWindow(sf::Vector2f mousePosition,sf::Vector2u windowSize)
+{
+    return !((mousePosition.x <= 0 || mousePosition.x >= windowSize.x) &&
+    (mousePosition.y<=0 || mousePosition.y >= windowSize.y));
+}
 int main(int argc,char* argv[])
 {
     int pageIndex = 0;
@@ -23,14 +27,14 @@ int main(int argc,char* argv[])
     Ressources::loadRessources();
     Ressources::actualPageIndex = pageIndex;
     Ressources::updateActualPage();
-    sf::RenderWindow window(sf::VideoMode(500, 500), "get REKT");
+    sf::RenderWindow window(sf::VideoMode(500, 500), "REKT Editor");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
     Dock d(sf::Vector2f(window.getSize().x, window.getSize().y));
     sf::View HUD(sf::FloatRect(0, 0, 500, 500));
     sf::View PageView(sf::FloatRect(0, 0, 500, 500));
     window.setView(sf::View(HUD));
-    sf::Vector2f mousePosition;
+    sf::Vector2f mousePosition = sf::Vector2f(-1,-1);
     sf::Vector2i previousPosition;
     bool moveView = false;
     const float zoomAmount = 1.1;
@@ -66,7 +70,7 @@ int main(int argc,char* argv[])
                     Ressources::actualPage->screenShot();
                 }
             }
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && mouseInWindow(mousePosition,window.getSize()))
             {
                 state = MouseState::PRESSED;
             }

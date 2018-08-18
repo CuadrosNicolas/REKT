@@ -1,2 +1,5 @@
 vscode/
 /Ressources/Datas/Images/TH*
+/lib/JsonReader.a
+/bin/objects/*.o
+/bin/REKT
