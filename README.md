@@ -1,4 +1,4 @@
-#Description
+# Description
 
 Ce projet a pour bute de créer un petit programme capable de dessiner/supprimer des rectangles sur des images
 et de les enregistrer au format .json.
