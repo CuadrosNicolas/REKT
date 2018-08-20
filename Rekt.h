@@ -24,8 +24,9 @@ class Rekt : public Entity
 		static void setMaxID(int i);
 		static std::string getID();
 		std::string getId();
+		std::string getLocationId();
 
-		Data m_data;
+			Data m_data;
 		Location m_location;
 
   protected:

@@ -75,7 +75,7 @@ void Page::remove(std::string id)
 {
 	for(size_t s=0;s<rekts.size();s++)
 	{
-		if(rekts[s]->getId()==id)
+		if(rekts[s]->getLocationId()==id)
 		{
 			rekts.erase(rekts.begin()+s);
 			break;

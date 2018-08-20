@@ -67,7 +67,7 @@ void MouseManager::updatePage(Page* p)
 				{
 					if(p->getRekt()[s]->getBox()->pointCollision(M.position) and M.status == PRESSED)
 					{
-						p->remove(p->getRekt()[s]->getId());
+						p->remove(p->getRekt()[s]->getLocationId());
 					}
 				}
 			break;

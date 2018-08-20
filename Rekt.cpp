@@ -55,6 +55,10 @@ std::string Rekt::getId()
 {
 	return ID;
 }
+std::string Rekt::getLocationId()
+{
+	return m_data.location_id;
+}
 void Rekt::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
 	if (m_isDrawable)
